@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Cash Login Page</title>
+
+    <!-- DaisyUi and Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
+    <style>
+        .montserrat{
+  font-family: "Montserrat", sans-serif;
+
+  .protest-guerrilla-regular{
+  font-family: "Protest Guerrilla", sans-serif;
+ 
+}
+
+}
+    </style>
+</head>
+
+
+<body class="montserrat">
+
+    <!-- Login Form -->
+     <h1 class="text-5xl font-extrabold text-center mt-28 mb-5 protest-guerrilla-regular">Payoo Cash</h1>
+    <div class="container mx-auto card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <div class="form-control mb-3">
+            <label class="label">
+              <span class="label-text text-2xl font-normal protest-guerrilla-regular">Mobile Number</span>
+            </label>
+            <input id="number-field" type="text" placeholder="Mobile Number" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span  class=" label-text text-2xl font-normal protest-guerrilla-regular">Pin</span>
+            </label>
+            <input id="pin-field" type="password" placeholder="Pin Number" class="input input-bordered" required />
+          </div>
+
+          <div id="login-btn" class="form-control mt-6">
+            <button class="btn btn-primary text-xl font-normal protest-guerrilla-regular">Login</button>
+          </div>
+
+        </form>
+      </div>
+      <script src="js/utilities.js"></script>
+      <script src="js/login.js"></script>
+</body>
+</html>

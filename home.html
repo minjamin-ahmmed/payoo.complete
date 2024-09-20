@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Cash HomePage</title>
+
+    <!-- DaisyUi and Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
+    <style>
+        .montserrat{
+  font-family: "Montserrat", sans-serif;
+
+  .protest-guerrilla-regular{
+  font-family: "Protest Guerrilla", sans-serif;
+ 
+}
+
+}
+    </style>
+</head>
+<body class="montserrat">
+    <section class="container mx-auto px-10 py-10">
+
+        <!-- Balance Card -->
+        <div class=" flex justify-between items-center mb-8">
+            <div class="stats shadow">
+                <div class="stat border-2 border-green-600">
+                  <div class="stat-title">Total Balance</div>
+                  <div id="balance" class="stat-value">10000</div>
+                </div>
+              </div>
+
+              <!-- LogOut Button -->
+              <div>
+                <button class="btn btn-success">Logout</button>
+              </div>
+        </div>
+
+        <!-- divider -->
+        <div class="divider"></div>
+
+        <h1 class="text-xl font-normal text-white protest-guerrilla-regular">🔥Welcome to Payoo Cash</h1>
+        <p class="text-justify">Enjoy easy and convenient financial service with us. Cashout charge is low and Transfer Money is freeeeee!</p>
+
+        <!-- divider -->
+        <div class="divider"></div>
+
+        <div class="grid grid-cols-3 gap-5">
+            <button id="btn-add-money" class="btn btn-outline btn-success">Add Money</button>
+            <button id="btn-cash-out" class="btn btn-outline btn-success">CashOut</button>
+            <button id="btn-transfer-money" class="btn btn-outline btn-success">Transfer Money</button>
+            <button id="btn-get-bonus" class="btn btn-outline btn-success">Get Bonus</button>
+            <button id="btn-payBill" class="btn btn-outline btn-success">Pay Bill</button>
+            <button id="btn-transictions" class="btn btn-outline btn-success">Transactions</button>
+        </div>
+
+        <!-- divider -->
+        <div class="divider"></div>
+
+        <!-- Card Container -->
+        <div id="latest-payment-form">
+            <div class="flex justify-between mb-4">
+                <h2 class="font-bold text-white">Latest Payment</h2>
+                <p>View All</p>
+            </div>
+    
+            <div class="space-y-5">
+        
+        <div class="bg-[#191F25] p-4 rounded-2xl flex justify-between items-center shadow-lg">
+            <div class=" ">
+                <h3 class="font-semibold text-lg">Electric Bill</h3>
+                <p>Today: 1.44pm</p>
+            </div>
+            <div>
+                <h1 class="text-white font-bold text-2xl">⋮</h1>
+            </div>
+        </div>
+    
+        <div class="bg-[#191F25] p-4 rounded-2xl flex justify-between items-center shadow-lg">
+            <div class=" ">
+                <h3 class="font-semibold text-lg">Bank Deposit</h3>
+                <p>Today: 1.44pm</p>
+            </div>
+            <div>
+                <h1 class="text-white font-bold text-2xl">⋮</h1>
+            </div>
+        </div>
+    
+        <div class="bg-[#191F25] p-4 rounded-2xl flex justify-between items-center shadow-lg">
+            <div class=" ">
+                <h3 class="font-semibold text-lg">Mobile Recharge</h3>
+                <p>Today: 1.44pm</p>
+            </div>
+            <div>
+                <h1 class="text-white font-bold text-2xl">⋮</h1>
+            </div>
+        </div>
+    
+            </div>
+        </div>
+        <!-- Card Container End -->
+
+        <!-- Add MoneY Starts-->
+        <div id="add-money-form" class="hidden">
+            <h2 class="font-bold text-xl text-white">Add Money</h2>
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
+            <form class="card-body space-y-2">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-lg font-bold text-white">Account Number</span>
+                </label>
+                <input id="account-number-add-money" type="text" placeholder="Your Account Number" class="input input-bordered" required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-lg font-bold text-white">Amount</span>
+                </label>
+                <input id="amount-add-money" type="text" placeholder="Amount" class="input input-bordered" required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-lg font-bold text-white">Pin</span>
+                </label>
+                <input id="pin-add-money" type="password" placeholder="Your Pin" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-money-btn" class="btn btn-success">Add Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Add MoneY end-->
+
+        <!-- Cash Out Starts -->
+        <div id="cash-out-form" class="hidden">
+            <h2 class="font-bold text-xl text-white">Cash Out</h2>
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
+            <form class="card-body space-y-2">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-lg font-bold text-white">Account Number</span>
+                </label>
+                <input id="cash-out-account-number" type="text" placeholder="Your Account Number" class="input input-bordered" required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-lg font-bold text-white">Amount</span>
+                </label>
+                <input id="cash-out-amount" type="text" placeholder="Amount" class="input input-bordered" required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-lg font-bold text-white">Pin</span>
+                </label>
+                <input id="cash-out-pin" type="password" placeholder="Your Pin" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash-out-btn" class="btn btn-success">Cash Out</button>
+              </div>
+            </form>
+          </div>
+        </div>
+         <!-- Cash Out Ends -->
+    </section>
+        
+   <script src="js/utilities.js"></script>
+   <script src="js/addMoney.js"></script>
+   <script src="js/cashOut.js"></script>
+   <script src="js/features.js"></script>
+</body>
+</html>
